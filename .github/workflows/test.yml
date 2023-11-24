@@ -7,9 +7,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.1.1
+    - uses: actions/checkout@v4.1.1
     - name: Install NodeJS
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '16.20.2'
     - name: install
@@ -23,7 +23,7 @@ jobs:
       uses: actions/setup-go@v4
       with:
         go-version: '1.21'
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4.1.1
     - uses: ./
     - name: Env
       run: echo $BI_LDFLAGS
